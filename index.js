@@ -14,9 +14,9 @@ const { prompt, print } = require('./prompt-print');
  * 2. print function to print text on to the console
  */
 
-let q;
-let count;
 function question() {
+  let q;
+  let count;
   do {
     q = prompt();
     if (q === 'BYE') {
@@ -28,10 +28,9 @@ function question() {
     if (q !== 'BYE') {
       count = 0;
     }
-    const r1 = isUppercase(q);
-    if (r1) {
+    if (isUppercase(q)) {
       const year = getRandomValue(1930, 1950);
-      print('NO, NOT SINCE '.concat(year));
+      print(`NO, NOT SINCE ${year}`);
     } else {
       print('HUH?! SPEAK UP, SONNY!');
     }
